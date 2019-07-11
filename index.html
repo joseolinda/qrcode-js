@@ -19,9 +19,10 @@
         Instascan.Camera.getCameras().then(cameras => 
         {
             if(cameras.length > 0){
+                const nomeCameras = ["Frontal", "Traseira", "Outras"]
                 console.log("Lista de câmeras:");
                 for( let i = 0; i < cameras.length; i++ ) {
-                  alert( "Câmera " + i );
+                  alert( "Câmera " + nomeCameras[i] );
                 }
                 scanner.start(cameras[0]);
             } else {
